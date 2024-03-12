@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <link rel="stylesheet" href="book_now.css">
+    <script src="book_now.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+<div class="video-container">
+        <video autoplay muted loop id="bgVideo">
+            <source src="./images/Green Abstract Welcome To My Channel Video.mp4" type="video/mp4">
+        
+        </video>
+        <!-- Other content here, like text, images, etc. -->
+    
+      <div class="container">
+        <h1>Book Now</h1>
+        
+        <form id="bookingForm" action="https://formspree.io/f/meqyzepl"method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="packageName">Package Name:</label>
+                <input type="text" id="packageName" name="packageName" required>
+                <!-- Dropdown menu example -->
+                <select id="dropdownMenu" name="dropdownMenu" onchange="updatePackageName(this)" required>
+                    <option value="">Select an option</option>
+                    <option value="OOTY">OOTY</option>
+                    <option value="Option 2">Option 2</option>
+                    <option value="Option 3">Option 3</option>
+                </select>
+            </div>
+            
+            
+
+            
+            
+            <button type="submit" class="btn" style="width: 185px;">
+                <i class="fa fa-paper-plane-o fa-2x send" aria-hidden="true"></i>
+                <i class="fa fa-paper-plane-o fa-2x send2" aria-hidden="true"></i>
+                <p>Send</p>
+            </button>
+        </form>
+     </div>
+</div>
+</body>
+</html>

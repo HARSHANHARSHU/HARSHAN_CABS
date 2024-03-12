@@ -1,0 +1,150 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 500px;
+    margin: 100px auto;
+    background-color: #fff5f5;
+    border-radius: 80px;
+    box-shadow: 0 0 20px rgb(246, 1, 1);
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+button {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 100px; /* Reduced border-radius */
+    font-size: 14px; /* Reduced font size */
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px; /* Adjusted padding */
+}
+
+.btn p {
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+    font-size: 16px; /* Reduced font size */
+    transition: all 0.5s ease;
+}
+
+.send {
+    position: absolute;
+    top: 20px; /* Adjusted position */
+    right: 125px; /* Adjusted position */
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.send2 {
+    position: absolute;
+    top: 89px; /* Adjusted position */
+    right: 125px; /* Adjusted position */
+    color: #696666;
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    background: #f9c23c;
+    transition: all 0.5s ease;
+}
+
+.btn:hover p {
+    color: #696666;
+    transition: all 0.5s ease;
+    animation: move 1s linear 1s forwards;
+}
+
+.btn:hover .send {
+    top: -40px; /* Adjusted position */
+    transition: all 0.5s ease;
+}
+
+.btn:hover .send2 {
+    top: 20px; /* Adjusted position */
+    transition: all 0.5s ease;
+    animation: sending 1s linear 1s forwards;
+}
+
+@keyframes sending {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translate(20px, -70px); /* Adjusted position */
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-3px);
+    }
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden;
+}
+
+#bgVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire container */
+    z-index: -1;
+}
